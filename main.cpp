@@ -102,11 +102,12 @@ int main(int argc, char** argv)
         }
 
         // (5%) randomy add request to queue
-        if (rand() % 20 == 0) {
+        if (rand() % 20 == 0) 
+        {
             int random_time = generateTime();
             Request to_add = {generateIP(), generateIP(), random_time};
             lb.addRequestToQueue(to_add);
-            cout << "Adding new random request" << endl;
+            //cout << "Adding new random request" << endl;
 
             if (random_time > max_task_time) 
             {
