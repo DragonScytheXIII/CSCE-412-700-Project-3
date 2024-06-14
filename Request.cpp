@@ -1,10 +1,8 @@
 // Request.cpp
-// Created by leero on 9/29/2022.
+// Created by DragonScytheXIII on 6/14/2022.
 //
-
 #define REQUEST_CPP
 #include <string>
-
 /**
  * This structure represents a request object. It contains the Source and Destination
  * IP4 Address as well as the expected time to complete the request.
