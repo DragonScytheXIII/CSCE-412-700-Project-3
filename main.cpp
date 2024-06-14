@@ -93,7 +93,7 @@ int main(int argc, char** argv)
         if (server_arr[current_time % num_servers].isRequestDone(current_time)) 
         {
             Request req = server_arr[current_time % num_servers].getRequest();
-            cout << "At time value = " << current_time << " " << server_arr[current_time % num_servers].getName() <<
+            cout << "At time value = " << current_time << " Server " << server_arr[current_time % num_servers].getName() <<
             " has processed a request from " << req.ip_in << " to " << req.ip_out << endl;
 
             // Give Server new request
