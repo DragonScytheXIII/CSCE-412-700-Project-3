@@ -1,0 +1,128 @@
+\doxysection{Load\+Balancer Class Reference}
+\hypertarget{class_load_balancer}{}\label{class_load_balancer}\index{LoadBalancer@{LoadBalancer}}
+
+
+Manages a queue of requests and distributes them to servers.  
+
+
+
+
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_load_balancer_a6e6669a6a4f0c3df345a13246b17a84b}{Load\+Balancer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_load_balancer}{Load\+Balancer} class. Initializes the time to zero. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_load_balancer_a30f1978baabed6ab1b8f6b80f38867b5}{request\+Queue\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the request queue is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_a53a98f96b3ed2f4940d16b24e16f3d48}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current time of the load balancer. \end{DoxyCompactList}\item 
+\Hypertarget{class_load_balancer_ae24f5d16503fd1c6160ea2fefcf3fe2c}\label{class_load_balancer_ae24f5d16503fd1c6160ea2fefcf3fe2c} 
+void {\bfseries increment\+Time} ()
+\begin{DoxyCompactList}\small\item\em Increments the clock cycle of the load balancer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_balancer_af1a24c072dfbebf6e184ba60d494281d}{add\+Request\+To\+Queue}} (\mbox{\hyperlink{struct_request}{Request}} req)
+\begin{DoxyCompactList}\small\item\em Adds a request to the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{class_load_balancer_a21cd3898bc4c581fce3cafbd02b56b4a}{get\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Fetches and removes a request from the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}{get\+Queue\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the request queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a queue of requests and distributes them to servers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_load_balancer_a6e6669a6a4f0c3df345a13246b17a84b}\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{LoadBalancer()}{LoadBalancer()}}
+{\footnotesize\ttfamily \label{class_load_balancer_a6e6669a6a4f0c3df345a13246b17a84b} 
+Load\+Balancer\+::\+Load\+Balancer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_load_balancer}{Load\+Balancer} class. Initializes the time to zero. 
+
+Default constructor for \doxylink{class_load_balancer}{Load\+Balancer} class. Initializes the time to zero. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_load_balancer_af1a24c072dfbebf6e184ba60d494281d}\index{LoadBalancer@{LoadBalancer}!addRequestToQueue@{addRequestToQueue}}
+\index{addRequestToQueue@{addRequestToQueue}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{addRequestToQueue()}{addRequestToQueue()}}
+{\footnotesize\ttfamily \label{class_load_balancer_af1a24c072dfbebf6e184ba60d494281d} 
+void Load\+Balancer\+::add\+Request\+To\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_request}{Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Adds a request to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The \doxylink{struct_request}{Request} object to be added to the queue.\\
+\hline
+{\em request} & The \doxylink{struct_request}{Request} object to be added to the queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}\index{LoadBalancer@{LoadBalancer}!getQueueSize@{getQueueSize}}
+\index{getQueueSize@{getQueueSize}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getQueueSize()}{getQueueSize()}}
+{\footnotesize\ttfamily \label{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b} 
+int Load\+Balancer\+::get\+Queue\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the size of the request queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the request queue as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_a21cd3898bc4c581fce3cafbd02b56b4a}\index{LoadBalancer@{LoadBalancer}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily \label{class_load_balancer_a21cd3898bc4c581fce3cafbd02b56b4a} 
+\mbox{\hyperlink{struct_request}{Request}} Load\+Balancer\+::get\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Fetches and removes a request from the queue. 
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_request}{Request} object that was removed from the queue. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::logic\+\_\+error} & if the queue is empty. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_load_balancer_a53a98f96b3ed2f4940d16b24e16f3d48}\index{LoadBalancer@{LoadBalancer}!getTime@{getTime}}
+\index{getTime@{getTime}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \label{class_load_balancer_a53a98f96b3ed2f4940d16b24e16f3d48} 
+int Load\+Balancer\+::get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current time of the load balancer. 
+
+\begin{DoxyReturn}{Returns}
+Current time as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_a30f1978baabed6ab1b8f6b80f38867b5}\index{LoadBalancer@{LoadBalancer}!requestQueueEmpty@{requestQueueEmpty}}
+\index{requestQueueEmpty@{requestQueueEmpty}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{requestQueueEmpty()}{requestQueueEmpty()}}
+{\footnotesize\ttfamily \label{class_load_balancer_a30f1978baabed6ab1b8f6b80f38867b5} 
+bool Load\+Balancer\+::request\+Queue\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the request queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the request queue is empty, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_load_balancer_8h}{Load\+Balancer.\+h}}\item 
+\mbox{\hyperlink{_load_balancer_8cpp}{Load\+Balancer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\doxysection{Server Class Reference}
+\hypertarget{class_server}{}\label{class_server}\index{Server@{Server}}
+
+
+Represents a server that processes requests.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_server_ad5ec9462b520e59f7ea831e157ee5e59}\label{class_server_ad5ec9462b520e59f7ea831e157ee5e59} 
+{\bfseries Server} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_server}{Server} class. Initializes the server name to an empty character. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_server_ad22f5f88f6489eabdc3d30308d846f22}{Server}} (char c)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor for the \doxylink{class_server}{Server} class. Initializes the server name to the input character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_a6760fa1a54103fb03aad48333558ec02}{add\+Request}} (\mbox{\hyperlink{struct_request}{Request}} req, int current\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Adds a request for the server to process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_server_a9489ca2317d84a8ed6b4a1b09eed8802}{is\+Request\+Done}} (int current\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Checks if the current request has finished processing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{class_server_ac9cf89a6632479158830d92fe8e1be91}{get\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current request being processed by the server. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_server_a064bb463dc821553d703a06ad540f201}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a server that processes requests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_server_ad22f5f88f6489eabdc3d30308d846f22}\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily \label{class_server_ad22f5f88f6489eabdc3d30308d846f22} 
+Server\+::\+Server (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Overloaded constructor for the \doxylink{class_server}{Server} class. Initializes the server name to the input character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Character to set as the server name. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_server_a6760fa1a54103fb03aad48333558ec02}\index{Server@{Server}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily \label{class_server_a6760fa1a54103fb03aad48333558ec02} 
+void Server\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_request}{Request}}}]{req}{, }\item[{int}]{curr\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Adds a request for the server to process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The \doxylink{struct_request}{Request} object to be processed. \\
+\hline
+{\em current\+\_\+time} & The current time when the request was added.\\
+\hline
+{\em req} & The \doxylink{struct_request}{Request} object to be processed. \\
+\hline
+{\em curr\+Time} & The current time when the request was added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_server_a064bb463dc821553d703a06ad540f201}\index{Server@{Server}!getName@{getName}}
+\index{getName@{getName}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_server_a064bb463dc821553d703a06ad540f201} 
+char Server\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the name of the server. 
+
+\begin{DoxyReturn}{Returns}
+The name of the server as a character. 
+\end{DoxyReturn}
+\Hypertarget{class_server_ac9cf89a6632479158830d92fe8e1be91}\index{Server@{Server}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily \label{class_server_ac9cf89a6632479158830d92fe8e1be91} 
+\mbox{\hyperlink{struct_request}{Request}} Server\+::get\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current request being processed by the server. 
+
+\begin{DoxyReturn}{Returns}
+The current \doxylink{struct_request}{Request} object. 
+\end{DoxyReturn}
+\Hypertarget{class_server_a9489ca2317d84a8ed6b4a1b09eed8802}\index{Server@{Server}!isRequestDone@{isRequestDone}}
+\index{isRequestDone@{isRequestDone}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{isRequestDone()}{isRequestDone()}}
+{\footnotesize\ttfamily \label{class_server_a9489ca2317d84a8ed6b4a1b09eed8802} 
+bool Server\+::is\+Request\+Done (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current request has finished processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+time} & The current time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the request has finished, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_server_8h}{Server.\+h}}\item 
+\mbox{\hyperlink{_server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}

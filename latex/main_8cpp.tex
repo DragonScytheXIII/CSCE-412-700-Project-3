@@ -1,0 +1,83 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Main file for the Load Balancer simulation.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include "{}Load\+Balancer.\+h"{}}\newline
+{\ttfamily \#include "{}Server.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{main_8cpp_a6263b2bac07c2e1c59dcf8295e8cdf44}{generate\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random IPv4 address. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a375b072f357aee6f3c021de32ace8a12}{generate\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random time between 3 and 499 milliseconds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Main function for the Load Balancer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main file for the Load Balancer simulation. 
+
+\begin{DoxyAuthor}{Author}
+Dragon\+Scythe\+XIII 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/14/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a6263b2bac07c2e1c59dcf8295e8cdf44}\index{main.cpp@{main.cpp}!generateIP@{generateIP}}
+\index{generateIP@{generateIP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{generateIP()}{generateIP()}}
+{\footnotesize\ttfamily \label{main_8cpp_a6263b2bac07c2e1c59dcf8295e8cdf44} 
+string generate\+IP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random IPv4 address. 
+
+\begin{DoxyReturn}{Returns}
+A random IPv4 address as a string. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a375b072f357aee6f3c021de32ace8a12}\index{main.cpp@{main.cpp}!generateTime@{generateTime}}
+\index{generateTime@{generateTime}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{generateTime()}{generateTime()}}
+{\footnotesize\ttfamily \label{main_8cpp_a375b072f357aee6f3c021de32ace8a12} 
+int generate\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random time between 3 and 499 milliseconds. 
+
+\begin{DoxyReturn}{Returns}
+A random time as an integer. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+
+
+Main function for the Load Balancer simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command-\/line arguments. \\
+\hline
+{\em argv} & Array of command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status. 
+\end{DoxyReturn}
