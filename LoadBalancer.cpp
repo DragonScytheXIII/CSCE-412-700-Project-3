@@ -1,45 +1,53 @@
-// LoadBalancer.cpp
-// Created by DragonScytheXIII on 6/14/2022.
-//
+/**
+ * @file LoadBalancer.cpp
+ * @brief Implementation of the LoadBalancer class.
+ * @author DragonScytheXIII
+ * @date 6/14/2022
+ */
+
 #include <stdexcept>
 #include "LoadBalancer.h"
+
 /**
- * Default constructor, initialized name to blank
+ * @brief Default constructor for LoadBalancer class.
+ * Initializes the time to zero.
  */
 LoadBalancer::LoadBalancer() 
 {
     time = 0;
 }
+
 /**
- * Gets the current time of the load balancer
- *
- * @return int, time
+ * @brief Gets the current time of the load balancer.
+ * @return Current time as an integer.
  */
 int LoadBalancer::getTime() 
 {
     return time;
 }
+
 /**
- * Increments the clock cycle of the load balancer
+ * @brief Increments the clock cycle of the load balancer.
  */
 void LoadBalancer::incrementTime() 
 {
     time += 1;
 }
+
 /**
- * Adds a request to the queue
- *
- * @param Request type to be added to queue
+ * @brief Adds a request to the queue.
+ * @param request The Request object to be added to the queue.
  */
 void LoadBalancer::addRequestToQueue(Request request) 
 {
     requestQueue.push(request);
     incrementTime();
 }
+
 /**
- * Fetches the request from the queue, removes request
- *
- * @return Request that was removed from queue.
+ * @brief Fetches and removes a request from the queue.
+ * @return The Request object that was removed from the queue.
+ * @throws std::logic_error if the queue is empty.
  */
 Request LoadBalancer::getRequest() 
 {
@@ -48,24 +56,23 @@ Request LoadBalancer::getRequest()
         Request removed = requestQueue.front();
         requestQueue.pop();
         return removed;
-    }
-    else {
+    } else {
         throw std::logic_error("Queue Empty, cannot remove");
     }
 }
+
 /**
- * Returns the size of the queue
- *
- * @return int, requestQueue size
+ * @brief Returns the size of the request queue.
+ * @return The size of the request queue as an integer.
  */
 int LoadBalancer::getQueueSize() 
 {
     return requestQueue.size();
 }
+
 /**
- * Returns whether requestQueue is empty
- *
- * @return bool, true if empty
+ * @brief Checks if the request queue is empty.
+ * @return True if the request queue is empty, false otherwise.
  */
 bool LoadBalancer::requestQueueEmpty() 
 {

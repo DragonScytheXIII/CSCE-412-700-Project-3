@@ -1,53 +1,66 @@
-// Server.cpp
-// Created by DragonScytheXIII on 6/14/2024.
-//
-#include "Server.h"
 /**
- * Default constructor, initialized name to empty char
+ * @file Server.cpp
+ * @brief Implementation file for the Server class.
+ * @author DragonScytheXIII
+ * @date 6/14/2024
+ */
+
+#include "Server.h"
+
+/**
+ * @brief Default constructor for the Server class.
+ * Initializes the server name to an empty character.
  */
 Server::Server() 
 {
     requestStartTime = 0;
     serverName = ' ';
-};
+}
+
 /**
- * Overloaded constructor, initialized name to input char
+ * @brief Overloaded constructor for the Server class.
+ * Initializes the server name to the input character.
+ * @param c Character to set as the server name.
  */
 Server::Server(char c) 
 {
     requestStartTime = 0;
     serverName = c;
-};
+}
+
 /**
- * Adds a request for the server to process
- * @param req, Request type to be added
- * @param currTime, Current time which request was added
+ * @brief Adds a request for the server to process.
+ * @param req The Request object to be processed.
+ * @param currTime The current time when the request was added.
  */
 void Server::addRequest(Request req, int currTime) 
 {
     r = req;
     requestStartTime = currTime;
-};
+}
+
 /**
- * Gets the Name of the server
- * @return char, name of server
+ * @brief Gets the name of the server.
+ * @return The name of the server as a character.
  */
 char Server::getName() 
 {
     return serverName;
 }
+
 /**
- * Returns whether a request has finished
- * @param current_time, Current time
- * @return bool, true if request finished
+ * @brief Checks if the current request has finished processing.
+ * @param current_time The current time.
+ * @return True if the request has finished, false otherwise.
  */
 bool Server::isRequestDone(int current_time) 
 {
     return (requestStartTime + r.time <= current_time);
-};
+}
+
 /**
- * Gets the request from the server
- * @return Request, current request being processed by server
+ * @brief Gets the current request being processed by the server.
+ * @return The current Request object.
  */
 Request Server::getRequest() 
 {
