@@ -2,7 +2,7 @@
  * @file LoadBalancer.cpp
  * @brief Implementation of the LoadBalancer class.
  * @author DragonScytheXIII
- * @date 6/14/2022
+ * @date 6/14/2024
  */
 
 #include <stdexcept>
